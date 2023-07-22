@@ -34,5 +34,5 @@ app.use( errorHandler )
  // listen server
  app.listen( PORT, () => {
     mongoDBconnect();
-    console.log(`Server is runing on port ${PORT}`.bgGreen.black);
+    console.log(`Server is runing on port ${ PORT }`.bgGreen.black);
  })

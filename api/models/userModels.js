@@ -17,16 +17,16 @@ const usersSchma = mongoose.Schema({
     },
     secondary_name : {
         type : String,
-        require : true,
-        trim : true
+        trim : true,
+        default : ''
     },
     username : {
         type : String,
-        trim : true
+        trim : true,
+        default : ''
     },
     email : {
         type : String,
-        unique : true,
         trim : true
     },
     mobile : {
@@ -36,6 +36,15 @@ const usersSchma = mongoose.Schema({
     },
     birth_date : {
         type : String,
+        require : true
+    },
+    birth_month : {
+        type : String,
+        require : true
+    },
+    birth_year : {
+        type : String,
+        require : true
     },
     gender : {
         type : String,
@@ -95,10 +104,6 @@ const usersSchma = mongoose.Schema({
         type : Array,
         default : []        
     },
-    following : {
-        type : Array,
-        default : []        
-    },
     follower : {
         type : Array,
         default : true
@@ -120,8 +125,7 @@ const usersSchma = mongoose.Schema({
         default : false
     },
     access_token: {
-        type : Boolean,
-        default : false
+        type : String
     },
     isActivate : {
         type : Boolean,
